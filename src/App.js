@@ -73,8 +73,8 @@ class App extends Component{
 
   saveForm = (callback) => {
     console.log(API_ADDRESS);
-    const {firstName, lastName, email, emaployed, employer, employerAddress} = this.state;
-    axios.post(`${API_ADDRESS}/form/create`, {firstName, lastName, email, emaployed, employer, employerAddress}, { })
+    const {firstName, lastName, email, employed, employer, employerAddress} = this.state;
+    axios.post(`${API_ADDRESS}/form/create`, {firstName, lastName, email, employed, employer, employerAddress}, { })
     .then(response => {
       console.log('response ok', response.data);
       callback(false, "Data saved");
